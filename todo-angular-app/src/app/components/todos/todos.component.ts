@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from './../../models/Todo';
 
 @Component({
   selector: 'app-todos',
@@ -7,11 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
 
-  todos = [];
+  todos!:Todo[];
+  // adding the "!" is a work around to typescripts strict class checking
 
   constructor() { }
 
   ngOnInit(): void {
+    this.todos = [
+      {
+        content:'First todo',
+        completed: false
+      },
+      {
+        content:'Second todo',
+        completed: false
+      }
+    ]
   }
 
 }

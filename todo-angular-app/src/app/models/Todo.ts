@@ -1,4 +1,5 @@
 export class Todo {
-    content:string;
-    complete:boolean;
+    content!:string;
+    completed!:boolean;
+
 }
