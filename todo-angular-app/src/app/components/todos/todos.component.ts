@@ -26,4 +26,13 @@ export class TodosComponent implements OnInit {
     ]
   }
 
+  // this method will strike-through a todo when completed
+  toggleDone (id:number) {
+    this.todos.map((v, i) => {
+      if (i = id) v.completed= !v.completed;
+
+      return v;
+    } )
+  }
+
 }
