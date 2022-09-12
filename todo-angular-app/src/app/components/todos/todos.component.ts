@@ -11,6 +11,8 @@ export class TodosComponent implements OnInit {
   todos!:Todo[];
   // adding the "!" is a work around to typescripts strict class checking
 
+  inputTodo: string = "";
+
   constructor() { }
 
   ngOnInit(): void {
